@@ -1,0 +1,73 @@
+{
+  "name": "friendly-error-helper",
+  "displayName": "Friendly Error Helper",
+  "description": "AI-powered error analysis and fixes using Gemini.",
+  "version": "0.1.0",
+  "publisher": "your-publisher-name",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Education",
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:friendly-error-helper.analyzeError"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "friendly-error-helper.analyzeError",
+        "title": "Friendly Helper: Analyze Error"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection",
+          "command": "friendly-error-helper.analyzeError",
+          "group": "navigation"
+        }
+      ],
+      "terminal/context": [
+        {
+          "when": "terminalHasSelection",
+          "command": "friendly-error-helper.analyzeError",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Friendly Error Helper",
+      "properties": {
+        "friendlyErrorHelper.geminiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Gemini Access Token or API Key."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "18.x",
+    "eslint": "^8.49.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  },
+  "dependencies": {
+    "marked": "^9.1.2",
+    "node-fetch": "^3.3.2"
+  }
+}
