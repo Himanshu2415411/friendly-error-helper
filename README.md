@@ -1,65 +1,101 @@
-# friendly-error-helper README
+Friendly Error Helper 🧠
 
-This is the README for your extension "friendly-error-helper". After writing up a brief description, we recommend including the following sections.
+"Don’t just fix errors — understand them."
 
-## Features
+Friendly Error Helper is an intelligent developer-assistant tool designed to make debugging easier, faster, and smarter. It's a VS Code extension that reads your code error messages, understands them using AI, and provides instant, clear explanations and solutions directly within your editor.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+(This is a placeholder for a future demo GIF)
 
-For example if there is an image subfolder under your extension project workspace:
+✨ Core Features (Phase 1 - Complete)
 
-\!\[feature X\]\(images/feature-x.png\)
+Instant Error Analysis: Select any error text from your code editor or terminal.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+AI-Powered Explanations: Get a detailed breakdown of what the error means, its root cause, and how to fix it.
 
-## Requirements
+Interactive Webview Panel: The analysis is displayed in a clean, easy-to-read panel right next to your code.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Offline Mode: Includes a built-in database of the most common JavaScript errors, providing instant offline help without needing an API key.
 
-## Extension Settings
+🚀 Getting Started
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+To run this extension locally for development:
 
-For example:
+Clone the repository:
 
-This extension contributes the following settings:
+git clone [https://github.com/YOUR_USERNAME/friendly-error-helper.git](https://github.com/YOUR_USERNAME/friendly-error-helper.git)
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
-## Known Issues
+Navigate to the project directory:
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+cd friendly-error-helper
 
-## Release Notes
 
-Users appreciate release notes as you update your extension.
+Install dependencies:
 
-### 1.0.0
+npm install
 
-Initial release of ...
 
-### 1.0.1
+Open in VS Code:
 
-Fixed issue #.
+code .
 
-### 1.1.0
 
-Added features X, Y, and Z.
+Run the Extension:
 
----
+Press F5 to open the "Extension Development Host" window.
 
-## Working with Markdown
+This will launch a new VS Code window with the extension running.
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+⚙️ How to Use
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+There are two primary ways to use the Friendly Error Helper:
 
-## For more information
+From the Code Editor:
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+Select any error message in your code.
 
-**Enjoy!**
+Right-click and choose Friendly Helper: Analyze Error.
+
+From the Terminal (Recommended):
+
+Run your code and get an error in the VS Code integrated terminal.
+
+Select the error message text (e.g., TypeError: Assignment to constant variable.).
+
+Copy the text to your clipboard (Ctrl + C).
+
+Open the Command Palette (Ctrl + Shift + P), search for Friendly Helper: Analyze Error, and press Enter.
+
+🗺️ Future Roadmap
+
+This project is just getting started! Here is the plan for future development:
+
+🌐 Phase 2: Chrome Extension
+
+Automatically capture and analyze errors from the browser's developer console.
+
+☁️ Phase 3: Live API & Cloud Sync
+
+Integrate a live Gemini API for analyzing a wider range of errors.
+
+Sync error history between VS Code and Chrome using a cloud backend.
+
+🤖 Advanced AI Features
+
+Provide AI auto-fix suggestions and corrected code snippets.
+
+Context-aware debugging that reads surrounding code for better suggestions.
+
+Support for more languages like Python, Java, and C++.
+
+💻 Tech Stack
+
+Framework: Visual Studio Code Extension API
+
+Language: JavaScript (Node.js)
+
+Dependencies: marked (for rendering), node-fetch (for future API calls)
+
+License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
